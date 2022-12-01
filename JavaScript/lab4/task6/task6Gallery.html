@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .gallery {
+        width: 80%;
+        margin: auto;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+      .gallery img {
+        width: 18%;
+        transition: all 0.6s ease-in-out;
+        opacity: 0.3;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="gallery">
+      <img class="img" src="./seconsection-dashed3.png" alt="" />
+      <img class="img" src="./img65.png" alt="" />
+      <img class="img" src="./home-dash1.png" alt="" />
+      <img class="img" src="./seconsection-dashed1.png" alt="" />
+      <img class="img" src="./seconsection-dashed2.png" alt="" />
+    </div>
+    <script>
+      let imags = document.querySelectorAll(".img");
+      for (const iterator of imags) {
+        iterator.addEventListener("mousemove", () => {
+          iterator.style.opacity = "1";
+        });
+        iterator.addEventListener("mouseleave", () => {
+          iterator.style.opacity = ".3";
+        });
+      }
+    </script>
+  </body>
+</html>
