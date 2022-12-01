@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 1000px;
+    overflow-x: hidden;
+}
+        nav{
+        width: 100vw;
+            background-color: rgb(190, 187, 10);
+            padding: 10px 50px;
+            position: sticky;
+            /* position: -webkit-sticky; */
+            /* bottom: 0px;  */
+            top: 0;
+      /* required */
+        }
+       ul li
+        {
+            margin: 0;
+            display: inline-block;
+
+        }
+ul li a{
+    text-decoration: none;
+    color: #fff;
+    text-transform: capitalize;
+margin: -2px;
+    padding: 10px;
+
+
+}
+ul li a:hover,.active{
+background-color: green;
+}
+pre{
+    padding: 0px 20px;
+}
+    </style>
+</head>
+<body>
+
+    <!--
+         task2 
+    Q1:What’s the difference between the following display values: inline, block, inline-block? 
+
+    answer =>
+    inline =>make elements at the same line and not accept width or height
+    block =>make elements at the new line and accept width or height because block is greedy take full width of screen 
+    inline-block=> this property have advantages of inline and block (how?)=> because it make element at the same line and this also accept width and height
+
+    
+    Q2:Change the navbar to be position: sticky. (What’s the difference?).  
+
+    not => sticky not work else i add property called top:0;
+    answer: i noticed that fixed become first lyer above content but stick respect other content and take area in viwe port 
+
+    
+
+    task 10
+    On home page in Day.2 assignments, redo the page layout using CSS instead of table-based layout. (you can follow the following guidelines: (https://www.w3schools.com/css/css_website_layout.asp) 
+
+    not => i made it before at day 2
+
+    
+    -->
+    <nav>
+        <ul style="list-style: none;">
+            <li><a class="active" href="#">home</a></li>
+            <li><a href="#">about</a></li>
+            <li><a href="#">contact</a></li>
+        </ul>
+    </nav>
+    <pre>
+hi
+
+
+
+
+
+
+my 
+
+
+
+
+
+
+name is
+
+
+
+
+mostafa hessen
+    </pre>
+</body>
+</html>

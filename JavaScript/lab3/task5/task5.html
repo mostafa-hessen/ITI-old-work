@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+            text-align: center;
+        }
+        input{
+            display: inline-block;
+            /* text-align: center/////; */
+            border: 1px dashed black;
+            outline: none;
+            padding: 10px;
+            margin-bottom: 10px;
+            /* position: ; */
+
+            
+
+        }
+
+        .emailEx,.fullNameEx{
+            display: none;
+            /* margin-bottom: 20px; */
+            /* position: absolute; */
+            /* top: 0; */
+
+        }
+
+        p.active{
+            display: block;
+            color: rgb(6, 174, 6);
+        }
+        .rightEmail,.rightName{
+            display: inline ;
+            margin-top: 6px;
+            position: absolute;
+        }
+           form span{display: none;
+            /* margin-left: -23px; */
+            margin-top: 6px;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+  
+    <div class="login">
+        <form action="">
+            <input  id="fullName" type="text" class="full-name input" placeholder="enter your full name">
+            <span class=" ">✔️</span>
+            <p class="fullNameEx">Ex:mostafa hessen</p>
+           
+           <br> <input   id ="email"type="email" placeholder="enter your email" class="input">
+             <span class=" ">✔️</span>
+           <p class="  emailEx">Ex:nmma@gmail.com.eg</p>
+        </form>
+    </div>
+    <script src="./task5.js"></script>
+</body>
+</html>

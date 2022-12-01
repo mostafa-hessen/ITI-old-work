@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      label {
+        display: block;
+        /* width: 99px; */
+        margin-bottom: 10px;
+        /* background-color: red; */
+        /* padding: 5px 0px 5px 10px; */
+      }
+      input {
+        margin-bottom: 20px;
+      }
+      form{
+        text-align: center;
+        background-color: rgba(102, 67, 67, 0.363);
+        border-radius: 5px;
+        /* box-shadow: inset; */
+        box-shadow: inset 0 0 50px rgb(19, 18, 18);
+        padding: 10px;
+      }
+      form input{
+        border-radius: 5px;
+        outline: none;
+        border: none;
+        box-shadow:  0 10px 4px 2px rgb(17, 17, 17);
+
+      }
+
+ .text::after,.email::after,.lastname::after{
+content: "*";
+color: red;
+      }
+
+
+
+ input:invalid {
+  border: 2px solid;
+}
+input:valid{
+
+  border: 2px solid #fff;
+
+}
+
+
+input:valid ~ .not {
+  display: none;
+}
+
+
+input:invalid ~ .valid {
+  display: none;
+}
+
+
+
+
+    .not,.valid{
+      color: red;
+    }
+    </style>
+  </head>
+  <body>
+    <h1>form</h1>
+    <form action="./thanksPage.html">
+      <!-- <input type="number" name="" ><br/> -->
+<div class="text">
+  <label for="first" style="display: inline ;">first Name </label>
+</div>
+
+
+
+<input type="text" name="" id="first" required /> <br>
+<span class="not" >not valid</span>
+<span class="valid">valid</span>
+<br>
+<br>
+
+
+
+
+
+
+
+<div class="lastname">
+  <label for="last" style="display: inline;">Last Name </label>
+</div>
+
+
+<input type="text" name="" id="last" required /><br>
+<span class="not" style="color: red;">not valid </span><br>
+<span class="valid" style="color: red;"> valid </span>
+
+
+<br>
+<br>
+
+
+<div class="email">
+  <label for="email" style="display: inline;">Email </label>
+</div>
+
+  <input type="email" name="" id="email" required />
+  <br>
+<span class="not" style="color: red;">not valid </span><br>
+<span class="valid" style="color: red;"> valid </span>
+
+
+ 
+<br>
+<br>
+
+
+      <label for="password">password </label>
+      <input type="password" name="" id="password" /><br />
+
+      <label for="repeatPassword"> Re password </label>
+      <input type="password" name="" id="repeatPassword" /><br />
+
+      <label for="date">Date </label>
+      <input type="date" name="" id="date" /><br />
+
+      <label for="userPic">Upload Image</label>
+      <input type="file" name="" id="userPic" accept="image/png" /><br />
+
+      <input type="radio" name="a" id="a" />
+      <label style="display: inline" for="a">male</label>
+
+      <input type="radio" name="a" id="b" />
+      <label style="display: inline" for="b">female</label><br />
+      <br />
+
+      <label for="faculty"> Select Your Faculty</label>
+      <select id="faculty">
+        <option value="">a</option>
+        <option value="">b</option>
+        <option value="">c</option>
+      </select>
+      <br />
+      <br />
+      <br />
+
+      <label for="">Hobbies:</label>
+      <input type="checkbox" name="" id="Programming" />
+      <label style="display: inline" for="Programming">Programming</label>
+      <input type="checkbox" name="" id="reading" />
+      <label style="display: inline" for="reading">Reading</label>
+      <input type="checkbox" name="" id="swimming" /><label
+        style="display: inline"
+        for="swimming"
+        >Swimming</label
+      >
+      <br />
+      <br />
+
+      <textarea name="" id="" cols="20" rows="5"> </textarea>
+      <br />
+      <br />
+  
+      <input type="checkbox" name="" id="terms" />
+      <label style="display:inline" for="terms">I Agree  <a href="./termsAndCondtion.html" target="_blank">terms</a></label>
+      <br>
+      <br>
+      <button type="submit" >submit</button>
+      <button type="reset">reset</button>
+    <a href="#" style="width: 50px;height: 50px;border-radius: 50%;background-color: blue;padding: 20px;align-items: center;color: red;text-decoration: none;">=></a>
+
+    </form>
+
+  </body>
+</html>

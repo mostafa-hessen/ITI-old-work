@@ -1,0 +1,257 @@
+* {
+    box-sizing: border-box;
+  }
+
+  /* ==========common classes========= */
+  .capitalize {
+    text-transform: capitalize
+  }  
+
+
+
+
+  /* ========== styles ========= */
+
+  body {
+    background-color: #525561;
+    font-family: Arial, Helvetica, sans-serif;
+
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 140px;
+  }
+
+  .login {
+    max-width: 500px;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: 1px 0px 10px;
+    background-image: url("../media/pietro-de-grandi-VtNrNIrJMok-unsplash.jpg");
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    z-index: 9999;
+    padding: 20px 40px;
+    width: 60%;
+  }
+
+  .login  .body {
+    margin-top: 40px;
+    color: #fff;
+    width: 70%;
+
+  }
+
+  .login  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(55deg, #272a37 0%, #272a37 55%, #272a37ec 68%, #272a3798 100%);
+    z-index: -1;
+  }
+
+  
+
+   
+
+   
+ 
+ 
+
+  .login  .body  form {
+    width: 100%;
+    padding: 20px 0px;
+    text-transform: capitalize;
+
+  }
+
+  .login  .body form input {
+    margin-bottom: 20px;
+    background-color: #323644;
+    color: #fff;
+    border: none;
+    outline: none;
+    padding: 15px 10px;
+    height: 40px;
+    border-radius: 12px;
+    /*width: 250px;
+    */width: 70%;
+    position: relative;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+}
+  .login  .body form  label {
+   transition:   all .3s ease-in-out;
+   -webkit-transition:   all .3s ease-in-out;
+   -moz-transition:   all .3s ease-in-out;
+   -ms-transition:   all .3s ease-in-out;
+   -o-transition:   all .3s ease-in-out;
+}
+
+  .firstContainer,.lastContainer,.emailContainer,.passwordContainer{
+    position: relative;
+
+  }
+  label {
+
+    font-size: 10px;
+    color: rgb(141, 140, 140);
+    position: absolute;
+    z-index: 1;
+    top: 14px;
+    
+    /* left: -15px; */
+
+  }
+  /* .emailContainer label,.passwordContainer label{
+    top: 50px;
+  } */
+
+
+
+  .login  .body  input:focus {
+    border: 1px solid #206eb5;
+  }
+  
+  input:focus ~ label{
+     top: -14px;
+}
+
+
+  .login  .body  form  .btn2 {
+    background-color: #1d90f5;
+  }
+
+ 
+  .login  .body  .lastFirst{
+    width: 70%;
+    justify-content: space-between;
+    display: flex;
+}
+
+.login  .body  form .lastFirst .firstContainer,.lastContainer{
+    width: 100%;
+}
+.login  .body  .lastFirst .firstContainer    {
+    margin-right: 10px;
+
+}
+.login  .body  .lastFirst  input   {
+    /* margin-right: 20px; */
+    width: 99%;
+
+}
+
+ 
+  .login  .body  form .btns{
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+}
+.login  .body  form  .loginbtn {
+    background-color: #1d90f5;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 15px;
+    color: #fff;
+    width: 120px;
+    text-transform: capitalize;
+    cursor: pointer;
+
+  }
+
+  .login  .body  form  .btn1 {
+    background-color: #555b69;
+
+  }
+
+
+  @media(max-width:567px){
+    .login{
+        width: 60vw;
+    }
+    .login  .body {
+        width: 100%;
+    }
+   
+
+    
+
+
+  }
+
+  @media(min-width:568px)and (max-width:786px){
+
+    .login{
+        width: 60vw;
+    }
+    .login  .body {
+        width: 100%;
+    }
+
+    form{
+        width: 100%;
+    }
+
+   
+
+.btn1,.btn2{
+    margin-right: 10 px;
+}
+
+  }
+
+  @media (min-width:787px) and (max-width:1024px){
+
+.login{
+         width: 60vw;
+    } 
+    .login  .body {
+        width: 100%;
+    }
+
+    form{
+        width: 100%;
+    }
+
+   
+
+.btn1,.btn2{
+    margin-right: 10 px;
+} 
+
+  }
+
+  @media (min-width:1024px){
+    .login{
+        width: 60vw;
+    }
+  }
+
+
+  form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .firstContainer, .lastContainer, .emailContainer, .passwordContainer {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+  }

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="text-align: center;">
+    <pre><-- task 1-- ></pre>
+    <button id='btnClock'onclick="displayClockFunc()"      >display time</button>
+    <p id="clock"></p>
+
+    <pre><-- task 2-- ></pre>
+
+    <a  style="cursor: pointer;"  onclick="opentPage()">open </a>
+
+
+<!-- <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias eos amet deleniti repellendus voluptate quis rem minus exercitationem blanditiis fuga, dolorum placeat dolore rerum magni unde, facere doloribus nihil eius.</p> -->
+    <script>
+var btnClock=document.getElementById('btnClock')
+let pClock=document.getElementById('clock')
+let date ;
+
+function displayClockFunc(){
+    setInterval(
+
+        // ()=>pClock.innerHTML=`${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`
+        ()=>
+        {
+        date = new Date()
+
+            console.log(date.getSeconds())
+            pClock.innerHTML=`${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`
+        }
+        
+        ,1000)
+}
+
+
+
+function opentPage(){
+
+
+   setTimeout(()=> {
+    
+    let newWindow=window.open()
+
+    newWindow.document.write("Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias eos amet deleniti repellendus voluptate quis rem minus exercitationem blanditiis fuga, dolorum placeat dolore rerum magni unde, facere doloribus nihil eius.")
+
+
+},3000)
+
+}
+
+
+
+
+    </script>
+</body>
+</html>

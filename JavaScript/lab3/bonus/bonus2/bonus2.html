@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+  
+    }
+    #count{
+        background-color: rgba(171, 167, 167, 0.176);
+        width: 80vw;
+        height: 40vh;
+        margin: auto;
+        border-radius: 10px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(50px,70px));
+        /* grid-template-rows:repeat(1,20%); */
+        /* grid-column: ; */
+        /* align-items: center; */
+        justify-content: center;
+        /* align-items: flex-end; */
+        
+
+        gap: 10px;
+        
+        
+    }
+
+    #count p{
+        background-color: rgb(94, 88, 88);
+        border-radius: 5px;
+        height: 50px;
+        align-self: center;
+        border: 1px dashed gold;
+        color: #fff;
+        text-transform: capitalize;
+        text-align: center;
+        line-height: 1.4;
+        /* padding: 10px 0px; */
+    }
+</style>
+<body>
+    <h2 style="text-transform: capitalize;text-align:center">time to be at new year</h2>
+
+    <div id="count">
+        <p id="month"></p>
+        <p id="dayes">
+            
+        </p>
+        <p id="houres"></p>
+        <p id="minutes"></p>
+        <p id="seconds"></p>
+    </div>
+    
+    <script src="./bonus2.js"></script>
+</body>
+</html>

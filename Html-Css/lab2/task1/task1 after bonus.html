@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 80%;
+            height: 95%;
+            margin: auto;
+            background-color: #ddd;
+            display: grid;
+            grid-template-rows: 8% 5% 1fr 9% ;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        header{
+            background-color: #777D7A;
+            text-align: center;
+
+
+        }
+        nav{
+            background-color: #A9AE9F;
+            text-align: center;
+            padding: 10px;
+            text-transform: capitalize;
+
+        }
+
+        nav a{
+            margin-right: 5px;
+        }
+
+        section{
+            display: grid;
+            grid-template-columns: 25% 1fr 25%;
+        }
+        section .div1{
+            background-color: #999F8E;
+        }
+        section .div2{
+            background-color: #D2D8C7;
+            padding: 50px;
+            font-size: 20px;
+            line-height: 2;
+        }
+        section .div3{
+            text-align: center;
+            margin-top: 10px;
+        }
+        footer{
+            background-color: aqua;
+            text-align: center;
+
+            background-color: #777D6A;
+            padding: 8px;
+        }
+        iframe{
+            width: 95%;
+        }
+    </style>
+</head>
+<body>
+    <!-- usin css layout without tabels -->
+    <div class="container">
+        <header>
+            <img src="../media/myphoto.jpeg" alt="" width="70" style="margin-top:5px">
+        </header>
+        <nav>
+            <a href="../../Lab1/personal_website  after bonus/home.html" target="_blank">home</a>
+                        <a href="../../lab2/task2/task2.html" target="_blank">contact</a>
+                        <a href="../../Lab1/personal_website  after bonus/about.html" target="_blank">about</a>
+        </nav>
+
+        <section>
+            <div class="div1">
+                    <div class="box" style="padding: 2px; width: 90%;">
+                        <form action="" style="width: 100%;border: 1px dashed black;padding: 10px;">
+                            <input type="text" placeholder="inter your user name"><br>
+                            <input type="password" placeholder="inter your password" style="margin: 10px 0px"><br>
+                            <textarea name="" id="" cols="21" rows="5"></textarea><br>
+                            <button>submit</button>
+                        </form>
+                    </div>
+                    <hr>
+
+                    <div class="mypages" style="margin:auto;text-align:center">
+                        <a href="www.facebook.com" >
+                            <img src="../media/facebook.png" alt="" width="50">
+                        </a><br>
+                        <a href="www.twiter.com">
+                            <img src="../media/twiiter.png" alt="" width="50">
+                        </a><br>
+                    </div>
+
+                    <hr>
+
+                    <!-- <iframe src="https://www.youtube.com/watch?v=SUW49Jjxvac" frameborder="0"></iframe> -->
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/SUW49Jjxvac"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+
+
+
+            </div>
+            <div class="div2">
+                <h2 style="color:red;text-align:center">MY PROFILE</h2>
+                <ul>
+                    <li>name: </li>
+                    <li>age</li>
+                    <li>address</li>
+                    <li>phones</li>
+                    <li>faculty: <a href="https://www.azhar.eg/splash.html" target="blank">Al azher website</a>
+                    </li>
+                    <li>Hobbies
+                        <ol type="I">
+                            <li>gym</li>
+                            <li>football</li>
+                            <li>coding</li>
+                        </ol>
+                    </li>
+                    <li> <a href="mailto:gmail">gmail</a></li>
+                </ul>
+
+            </div>
+
+
+
+
+            <div class="div3">
+                
+
+                <img src="../media/myphoto.jpeg" alt="" width="140px">
+                        <hr>
+                        <h3>News</h3>
+            </div>
+        </section>
+
+        <footer>
+            <a href="#"> To Top</a>
+            <p>Copyrights &copy; are reserved to ITI</p>
+
+
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>lesson 1</title>
+    <style>
+      pre {
+        margin-top: 40px;
+      }
+    </style>
+  </head>
+
+  <body style="line-height: 2">
+    <!-- 1 semantic element -->
+    <pre><-- info 1--></pre>
+
+    <!-- 2  mark -->
+    <pre><-- info 2--></pre>
+    <mark>kjh</mark>
+
+    <!-- 3 <details> -->
+    <pre><-- info 3--></pre>
+    <details>
+      <summary>hi</summary>
+      Something small enough to escape casual notice.
+    </details>
+
+    <!-- 4  figuer for img -->
+    <pre><-- info 4 --></pre>
+
+    <figure style="text-align: start">
+      <img
+        width="100"
+        src="../Html-Css/Lab1/bounes 2 websit/Fast-delivery-package-by-scooter-mobile-phone-order-vector-PNG.png"
+        alt=""
+      />
+      <figcaption center>img</figcaption>
+      <!-- Note : figcaption not instead alt attribute -->
+    </figure>
+
+    <!-- 5- data list -->
+    <pre><-- info 5--></pre>
+
+    <input list="new" placeholder="inter yor choosen" />
+    <datalist id="new">
+      <option value="ds"></option>
+      <option value="jh"></option>
+      <option value="ds"></option>
+    </datalist>
+    <!-- Note: diffrenc between dataList vs  select  that dataList able us to search at the input -->
+
+    <!-- 6  oninput-->
+    <pre><-- info 6--></pre>
+    <form action="" oninput="me.value='hi ' + inpuVal.value">
+      <input placeholder="enter " type="range" name="inpuVal" />
+      <output name="me"></output>
+    </form>
+
+    <!-- 7  input new types-->
+    <pre><-- info 7--></pre>
+
+    <!-- 
+        1-color
+        2-date
+        3-email
+        4-url => dosn't accept any text else it as url
+        5-range
+        6-number
+    -->
+
+    <!-- 8 new attributes -->
+    <pre><-- info 8--></pre>
+    <details>
+      <summary>new attributes</summary>
+      <p>auto focus</p>
+      <p>placeholder</p>
+      <p>required</p>
+      <p>multible</p>
+      <p>min - max - step => belong to range input</p>
+    </details>
+
+    <!-- 9 object -->
+    <pre><-- info 9--></pre>
+    <object data="../Html-Css/lab2/task1/task1 before bonus.html" type=""></object>
+    <!-- that is instead ifram  -->
+
+    <!-- 10 audio -->
+    <pre><-- info 10--></pre>
+    <p>audio</p>
+    <audio src="" controls></audio>
+    <!-- if auto play doesn't work  we can instead it by paly() or paued()  by js -->
+
+    <!-- 11 video-->
+    <pre><-- info 11--></pre>
+    <p>video</p>
+    <video src="" controls></video>
+  </body>
+</html>
