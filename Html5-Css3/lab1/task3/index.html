@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+      .musicPlayer {
+        width: 400px;
+        min-height: 200px;
+        background-color: #eee;
+        display: flex;
+        flex-direction: column;
+        /* gap: 10px; */
+        padding: 10px;
+        border: none;
+        margin:100px auto;
+      }
+      .audio {
+        width: 100%;
+        height: 20%;
+        text-align: center;
+      }
+      .controls {
+        width: 100%;
+        height: 20%;
+        background-color: orangered;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        justify-content: space-evenly;
+      }
+      .btn {
+        /* margin-right: 10%; */
+        outline: none;
+        padding: 10px;
+       
+      }
+      .listaudios{
+        height: 1fr;
+        width: 100%;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+
+        padding: 10px;
+      }
+      .listaudios p{
+        border: 1px dashed;
+        padding: 10px;
+        cursor: pointer;
+        
+
+      }
+    </style>
+  </head>
+  <body>
+    <!-- music player -->
+    <div class="musicPlayer">
+      <div class="audio">
+        <audio  id="audio"controls autoplay>
+            <source id="theSourc" src="./Audio Samples/canon.mp3" type="audio/ogg">
+            <!-- <source src="horse.mp3" type="audio/mpeg"> -->
+          Your browser does not support the audio element.
+          </audio>
+      </div>
+      <div class="controls">
+        <button class="btn  " id="shuffle">shuffle</button>
+        <button class="btn" id="repeat">repeat</button>
+        <button class="btn" id="play">play</button>
+        <button class="btn" id="pause">pause</button>
+      </div>
+
+      <div class="listaudios">
+        <p class="listAudioBtn"  data-index="0">music 1</p>
+        <p class="listAudioBtn" data-index="1">music 2</p>
+        <p class="listAudioBtn" data-index="2">music 3</p>
+        <p class="listAudioBtn" data-index="3">music 4</p>
+      </div>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>
+<!-- 
+    dream
+ -->

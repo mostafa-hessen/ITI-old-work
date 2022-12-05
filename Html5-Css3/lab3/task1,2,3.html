@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      nav {
+        width: 40%;
+        margin: auto;
+        background-color: gray;
+        border-radius: 7px;
+      }
+      ul {
+        list-style: none;
+      }
+      ul li {
+        padding: 10px;
+        text-transform: capitalize;
+        display: inline-block;
+        cursor: pointer;
+      }
+      ul .active,
+      ul li:hover {
+        background-color: green;
+        padding: 10px;
+      }
+      pre {
+        text-align: center;
+      }
+
+      /* task 2 font family */
+      .li1 {
+        font-family: "Times New Roman", Times, serif;
+      }
+
+      .li2 {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .li3 {
+        font-family: "Lucida Console", "Courier New", monospace;
+      }
+      /* task 3 */
+      .imgDiv{
+        width: 50px;
+        height: 50px;
+        margin: auto;
+        cursor: pointer;
+        /* background-color: red; */
+        background-image: url('./facebook.png');
+        background-size: cover;
+        border-radius: 50%;
+        position: relative;
+      }
+      .imgDiv::after{
+        content: 'hi from facebook';
+        display: block;
+        position: absolute;
+        width: 0px;
+        overflow: hidden;
+        padding-left: 30px;
+        line-height: 2;
+        text-align: center;
+        height: 30px;
+        background-color: green;
+        left: 10px;
+        top: 20%;
+        z-index: -1;
+        border-radius: 10px;
+        transition: all 1s;
+      }
+      .imgDiv:hover::after{
+        width: 150px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- task 1 -->
+    <pre><-- task 1--></pre>
+    <nav>
+      <ul>
+        <!-- task 2 -->
+        <li class="active li1">home</li>
+        <li class="li2">page</li>
+        <li class="li3">about</li>
+      </ul>
+    </nav>
+
+
+    <!-- task 3 -->
+    <pre><-- task 3--></pre>
+
+    <div class="task3">
+        <div class="imgDiv">
+            
+        </div>
+    </div>
+
+  </body>
+</html>
