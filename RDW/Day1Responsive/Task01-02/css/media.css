@@ -1,0 +1,100 @@
+@media screen and (max-width: 500px) {
+
+    .container
+    {
+        display: block;
+    }
+    .side-nav
+    {
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .side-nav ul
+    {
+        display: flex;
+        justify-content: space-around;
+    }
+    .logo 
+    {
+        width: 70%;
+    }
+    .side-info
+    {
+        display: none;
+    }
+    .side-nav ul li h3
+    {
+        display: none;
+    }
+
+    .row
+    {
+        width: 100%;
+    }
+
+    .card
+    {
+        width: 80%;
+
+        padding: 10px 0px;
+    }
+}
+
+
+
+@media screen and (min-width: 501px) and (max-width: 700px) {
+
+
+    .container
+    {
+        display: block;
+    }
+
+    .side-nav
+    {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .side-info
+    {
+        display: none;
+    }
+    .logo 
+    {
+        width: 30%;
+    }
+    .logo img
+    {
+        width: 100%;
+    }
+    .side-nav ul
+    {
+        width: 70%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        font-size: xx-large;
+    }
+    .side-nav ul li h3
+    {
+        display: none;
+    }
+
+    
+    .row
+    {
+        width: 100%;
+    }
+
+    .card
+    {
+        width: 50%;
+
+        padding: 10px;
+    }
+
+}
