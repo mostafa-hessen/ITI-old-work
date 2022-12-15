@@ -1,15 +1,14 @@
 ///
-let RowContainer=document.querySelector('.row')
-let addTocartBtn
-let spanCounter=document.getElementById('spanCounter')
-// let x=`<i class="fas fa-star"></i>`
-fetch('https://fakestoreapi.com/products')
+let RowContainer = document.querySelector(".row");
+let addTocartBtn;
+let spanCounter = document.getElementById("spanCounter");
+
+fetch("https://fakestoreapi.com/products")
   .then((response) => response.json())
   .then((data) => {
-    
-    data.forEach(element => {
-        RowContainer.innerHTML+=
-        `
+    data.forEach((element) => {
+      console.log("", element.id);
+      RowContainer.innerHTML += `
         <div   id=${element.id}  style="margin-bottom:20px !important" class="product col-md-6 col-lg-4 mb-5 mb-md-0">
         <div style="height:520px"class="card d-flex dirction-column justify-content-between" >
         <div class="d-flex justify-content-between p-3">
@@ -60,36 +59,43 @@ fetch('https://fakestoreapi.com/products')
         </div>
         </div>
         
-        `
+        `;
+      addTocartBtn = document.querySelectorAll(".btn");
+      let id = JSON.parse(localStorage.getItem("ids"))
+        ? JSON.parse(localStorage.getItem("ids"))
+        : [];
+      for (const iterator of addTocartBtn) {
+        iterator.addEventListener("click", () => {
+          let cart = JSON.parse(localStorage.getItem("cart"))
+            ? JSON.parse(localStorage.getItem("cart"))
+            : [];
+          cart.push(
+            data[
+              +iterator.parentElement.parentElement.parentElement.parentElement.getAttribute(
+                "id"
+              ) - 1
+            ]
+          );
 
-        
+          localStorage.setItem("cart", JSON.stringify(cart));
+
+          id.push(
+            iterator.parentElement.parentElement.parentElement.parentElement.getAttribute(
+              "id"
+            )
+          );
+          localStorage.setItem("ids", JSON.stringify(id));
+          spanCounter.innerHTML = id.length;
+        });
+      }
     });
-   addTocartBtn=document.querySelectorAll('.btn')
-//    product=document.querySelectorAll('.product')
-  console.log(addTocartBtn);
- let id = JSON.parse(localStorage.getItem('ids'))?JSON.parse(localStorage.getItem('ids')): [] 
-//   let id=[]
-  console.log("=>",JSON.parse(localStorage.getItem('ids')));
-for (const iterator of addTocartBtn) {
-    iterator.addEventListener('click',()=>{
-        id.push(iterator.parentElement.parentElement.parentElement.parentElement.getAttribute('id'))
-        console.log(id);
-        localStorage.setItem("ids",JSON.stringify(id))
-        spanCounter.innerHTML=id.length
-
-    })
-
-    // console.log(iterator.parentElement.parentElement.parentElement.parentElement.getAttribute('id'));
-  }
-
-
+  })
+  .catch(function (error) {
+    document.getElementById("messages").innerHTML = error;
   });
 
-
-
-
-//      <i class="fas fa-star"></i>
-            //   <i class="fas fa-star"></i>
-            //   <i class="fas fa-star"></i>
-            //   <i class="fas fa-star"></i>
-            //   <i class="far fa-star"></i>
+// get number of product
+id = JSON.parse(localStorage.getItem("ids"))
+  ? JSON.parse(localStorage.getItem("ids"))
+  : [];
+spanCounter.innerHTML = id.length;
