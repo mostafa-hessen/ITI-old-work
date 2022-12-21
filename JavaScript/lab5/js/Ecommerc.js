@@ -3,11 +3,16 @@ let RowContainer = document.querySelector(".row");
 let addTocartBtn;
 let spanCounter = document.getElementById("spanCounter");
 
+// window.onpopstate = function(event) {
+  // console.log("D");
+  // // if(event.state["map"] == "some_state") // get the current state from the event obj
+  //   location.reload(); // reloads the current page to clear ajax changes
+  //   console.log("D");
+// };
 fetch("https://fakestoreapi.com/products")
   .then((response) => response.json())
   .then((data) => {
     data.forEach((element) => {
-      console.log("", element.id);
       RowContainer.innerHTML += `
         <div   id=${element.id}  style="margin-bottom:20px !important" class="product col-md-6 col-lg-4 mb-5 mb-md-0">
         <div style="height:520px"class="card d-flex dirction-column justify-content-between" >
@@ -61,7 +66,7 @@ fetch("https://fakestoreapi.com/products")
         
         `;
       addTocartBtn = document.querySelectorAll(".btn");
-      let id = JSON.parse(localStorage.getItem("ids"))
+       let id = JSON.parse(localStorage.getItem("ids"))
         ? JSON.parse(localStorage.getItem("ids"))
         : [];
       for (const iterator of addTocartBtn) {
@@ -85,17 +90,28 @@ fetch("https://fakestoreapi.com/products")
             )
           );
           localStorage.setItem("ids", JSON.stringify(id));
+          // spanCounter.innerHTML = id.length;
+
+
           spanCounter.innerHTML = id.length;
+
+          // window.location.href="cart.html".reload()
+          console.log("d");
         });
       }
     });
   })
   .catch(function (error) {
     document.getElementById("messages").innerHTML = error;
-  });
+  }
+  
+  
+  );
+  let  id = JSON.parse(localStorage.getItem("ids"))
+? JSON.parse(localStorage.getItem("ids"))
+: [];
 
-// get number of product
-id = JSON.parse(localStorage.getItem("ids"))
-  ? JSON.parse(localStorage.getItem("ids"))
-  : [];
-spanCounter.innerHTML = id.length;
+  spanCounter.innerHTML = id.length;
+  
+  // get number of product
+

@@ -336,3 +336,16 @@ let btnRemove = document.querySelectorAll(".btn-remove");
 btnPlus.forEach((ele) => ele.addEventListener("click", pulusFunction));
 btnMinus.forEach((ele) => ele.addEventListener("click", minusFunction));
 btnRemove.forEach((ele) => ele.addEventListener("click", removeItemFunction));
+
+
+window.onpopstate = function(event) {
+  console.log("D");
+  // if(event.state["map"] == "some_state") // get the current state from the event obj
+    location.reload(); // reloads the current page to clear ajax changes
+    console.log("D");
+};
+// test code
+// window.location.reload(true)
+// history.go();
+// history.go(0);
+
