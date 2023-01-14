@@ -1,0 +1,151 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!DOCTYPE html>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0;
+            box-sizing: border-box;
+        }
+      .myDive {
+        background-color: rgb(220, 183, 183);
+        width: 200px;
+        padding: 10px;
+        border-radius: 5px;
+      }
+      input {
+        background-color: transparent;
+        color: rgb(6, 6, 6);
+        border: none;
+        outline: none;
+      }
+
+      input::placeholder {
+        transition: all 1s ease-in-out;
+      }
+      input:focus::placeholder {
+        display: none;
+        opacity: 0;
+      }
+     
+      .muownbox{
+        background-color: rgb(175, 174, 174);
+        width:220px;
+        padding:10px;
+        border-radius: 5px;
+        margin: 60px auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+        transition: all 1s;
+        position: relative;
+
+    }
+    .muownbox::after{
+        content: "";
+        display: block;
+        width: 1px;
+        height: 100px;
+        background-color: red;
+        position: absolute;
+        right: -10%;
+    }
+    
+    .muownbox:hover{
+        opacity: .7;
+
+    }
+    .muownbox:hover .over{
+        opacity: 1;
+    }
+      .content{
+        display:flex;
+        font-size: 14px;
+        align-items: center;
+      }
+       
+      
+      .fa-headphones{
+     margin-right: 10px;
+      }
+      .over{
+        background-color: red;
+        position: absolute;
+        top: 110%;
+        width: 100%;
+        left: 0;
+        padding: 10px;
+        border-radius: 5px;
+        height: 230px;
+        opacity: 0;
+        transition: 1s;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <div class="myDive">
+        <input placeholder="mons"/>
+      <a href="">  <i class="fa-solid fa-magnifying-glass"></i></a>
+      </div> -->
+      <!-- <i class="fa-solid fa-chevron-down"></i> -->
+    <div class="muownbox">
+
+        <!-- ====== display ==== -->
+      <div class="content">
+        <div class="head">
+          <i class="fa-solid fa-headphones fa-2x"></i>
+        </div>
+        <div class="text">
+          <h6>Cstomer Support</h2>
+          <p>1-800-123-45-67</p>
+        </div>
+      </div>
+
+      <div class="icon">
+      <i class="fa-solid fa-chevron-down"></i>
+
+      </div>
+        <!-- ====== display ==== -->
+
+
+        <div class="over">
+            <h2>hello mons</h2>
+        </div>
+
+    </div>
+  </body>
+</html>
+
+<!-- 
+
+
+
+    <img width="300" height="300" 
+    alt="" decoding="
+    async" loading="lazy"
+     data-breeze="https://woodstock.temashdesign.me/electronics/wp-content/uploads/sites/2/2016/02/iphone6-300x300.jpg" 
+     src="https://woodstock.temashdesign.me/electronics/wp-content/uploads/sites/2/2016/02/iphone6-300x300.jpg"
+      class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail wp-post-image ls-is-cached br-loaded"
+       data-brsrcset="https://woodstock.temashdesign.me/electronics/wp-content/uploads/sites/2/2016/02/iphone6-300x300.jpg 300w,
+        https://woodstock.temashdesign.me/electronics/wp-content/uploads/sites/2/2016/02/iphone6-150x150.jpg 150w,
+         https://woodstock.temashdesign.me/electronics/wp-content/uploads/sites/2/2016/02/iphone6-120x120.jpg 120w,
+          https://woodstock.temashdesign.me/electronics/wp-content/uploads/sites/2/2016/02/iphone6-100x100.jpg 100w" 
+          data-brsizes="(max-width: 300px) 100vw, 300px" sizes="(max-width: 300px) 100vw, 300px" 
+          srcset="https://woodstock.temashdesign.me/electronics/wp-content/uploads/sites/2/2016/02/iphone6-300x300.jpg 300w,
+           https://woodstock.temashdesign.me/electronics/wp-content/uploads/sites/2/2016/02/iphone6-150x150.jpg 150w, 
+           https://woodstock.temashdesign.me/electronics/wp-content/uploads/sites/2/2016/02/iphone6-120x120.jpg 120w,
+            https://woodstock.temashdesign.me/electronics/wp-content/uploads/sites/2/2016/02/iphone6-100x100.jpg 100w">
+ -->

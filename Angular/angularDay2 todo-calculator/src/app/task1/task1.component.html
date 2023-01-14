@@ -1,0 +1,15 @@
+<div class="task1 text-capitalize">
+  <!-- <h2 class="text-danger text-warning">task2</h2> -->
+  <ul>
+    <li
+      *ngFor="let user of data; let i = index"
+      [ngClass]="{
+        'text-danger': user.country == 'UK',
+        'text-warning': user.country == 'USA',
+        'text-success': user.country == 'HK'
+      }"
+    >
+      {{ user.name }}
+    </li>
+  </ul>
+</div>

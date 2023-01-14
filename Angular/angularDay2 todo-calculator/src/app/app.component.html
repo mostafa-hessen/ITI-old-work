@@ -1,0 +1,44 @@
+<style>
+  body{
+    background-color: red;
+  }
+  h1{
+    color: gold;
+    text-align: center;
+    text-transform: capitalize;
+  }
+  .headHead{
+    background-color: #F4BC11;
+  }
+  </style>
+<div class="app">
+  <h1 class="mb-5 mt-3">mostafa hessen ramdan</h1>
+</div>
+<div class="container m-auto">
+
+<ngb-accordion #acc="ngbAccordion" class="ngbAccordion mb-3 ">
+  <ngb-panel id="toggle-1" title="Task1 Color The Country">
+    <ng-template ngbPanelContent>
+      <app-task1></app-task1>
+		</ng-template>
+	</ngb-panel>
+
+	<ngb-panel id="toggle-2" title="Task2 To Do List"  >
+		<ng-template ngbPanelContent class="hi" >
+     <app-task2-to-do-list></app-task2-to-do-list>
+		</ng-template>
+	</ngb-panel>
+
+  
+	<ngb-panel id="toggle-3" title="Task3 Calculatore"  >
+		<ng-template ngbPanelContent class="hi" >
+		</ng-template>
+	</ngb-panel>
+</ngb-accordion>
+<!-- <hr /> -->
+
+<button class="btn btn-sm btn-outline-primary me-2 mt-3" (click)="acc.toggle('toggle-1')">Toggle first</button>
+<button class="btn btn-sm btn-outline-primary me-2 mt-3" (click)="acc.toggle('toggle-2')">Toggle second</button>
+
+ <!-- <app-task2-to-do-list></app-task2-to-do-list> -->
+</div>

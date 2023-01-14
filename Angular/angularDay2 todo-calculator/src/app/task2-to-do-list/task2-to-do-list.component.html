@@ -1,0 +1,40 @@
+<div class="todoList mt-2">
+    <div class="logo">
+      <img src="../assets/images/R.png" alt="">
+    </div>
+    <section class="todo-body">
+      <h4 class="text-capitalize py-3">your to do list 😊</h4>
+      <form action="">
+        <div class="add">
+          <input type="text" placeholder="✍ Add Item" (change)="ubdateValue($event)">
+          <button (click)="pushToArray($event)"><img width="20" src="../assets//images/plus-svgrepo-com.svg" alt=""></button>
+        </div>
+      </form>
+  
+      <div class="tasks mt-3">
+          <!-- === task === -->
+          <!-- class="task mt-2" [ngStyle]="{'background-color',text-decoration: value.is_Checked === true ? '#5637E1','none' : '#FEFEF','none' }"  -->
+          <div
+          *ngFor="let value of arrayOFValues "
+          class="task mt-2" [ngStyle]="value.is_Checked?{'background-color':'#5637E1','color':'#fff'}  : {'background-color':'#FEFEF'} " 
+          
+        >
+          <div class="flex">
+            <input type="checkbox" (click)="completed(value.id,$event)">
+            <p class="taskContent text-capitalize ms-3"style="display: inline-block;"
+            [ngStyle]="value.is_Checked?{'text-decoration-line':'line-through'}:{'text-decoration':'none'}"
+            
+            >
+                {{value.taskName}}
+            </p>
+          </div>
+          <button (click)="delete(value.id,$event)" class="">X</button>
+        </div>
+  
+      </div>
+    </section>
+    <footer class="mt-5">
+      <p>Made with 💖 by <a href="" style="text-decoration: none;">Mostafa Bebo</a></p>
+      <p>good luck 💥</p>
+    </footer>
+  </div>

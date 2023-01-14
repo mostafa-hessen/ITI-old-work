@@ -1,0 +1,15 @@
+/* ===== general classes ===== */
+
+*{
+    margin: 0;
+}
+
+.app{
+    margin: auto;
+    width: 80%;
+}
+.ngbAccordion{
+    padding: 10px;
+}
+
+
