@@ -1,0 +1,22 @@
+
+
+<div class="card">
+    <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+      <img [src]="item.image" class="img-fluid"/>
+      <a href="#!">
+        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+      </a>
+    </div>
+    <div class="card-body mt-2"
+    style="display:  flex ;flex-direction:column;justify-content:space-around">
+    <h5 class="card-title mb-2">{{item.name}}</h5>
+
+    <p class="card-stock" [ngStyle]="item.count==0?{'color':'red'}:{'color':'green'}" >{{item.count|stock}}</p>
+
+      <p class="card-price  bold">{{item.price | currency:' EGP'}}</p>
+      <a class="card-details  bold" routerLink="details/{{item.id}}">Details</a>
+
+      <p lass="card-date ">{{item.createdAt|date:"MMMM YYYY"}}</p>
+      <a href="#!" class="btn btn-danger">Add To Cart</a>
+    </div>
+  </div>

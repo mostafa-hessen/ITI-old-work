@@ -1,1 +1,33 @@
-<p>task3-calculatore works!</p>
+<div class="calculator mt-4">
+    <div class="resulte">
+        <h3 class="me-4 " >
+            <span *ngFor="let i of arrayOfClicked">{{i}}</span>
+            <span>{{valueOfArray}}</span>
+        </h3>
+    </div>
+
+    <div class="operations_number text-capitalize">
+        <div class="clear_division">
+            <div class="box"(click)="clear()" >clear</div>
+            <div class="box operator" (click)="pushValue('/')">/</div>
+        </div>
+        <div class="allNumber">
+            <div class="box"(click)="pushValue(7)">7</div>
+            <div class="box"(click)="pushValue(4)">4</div>
+            <div class="box"(click)="pushValue(1)">1</div>
+            <div class="box" (click)="edite()" ><img width="23" src="../../assets/images/2f37d10131f2a483a8dd005b3d14b0d9.png" alt="..."></div>
+            <div class="box"(click)="pushValue(8)">8</div>
+            <div class="box"(click)="pushValue(5)">5</div>
+            <div class="box"(click)="pushValue(2)">2</div>
+            <div class="box"(click)="pushValue(0)">0</div>
+            <div class="box"(click)="pushValue(9)">9</div>
+            <div class="box"(click)="pushValue(3)">3</div>
+            <div class="box"(click)="pushValue(6)">6</div>
+            <div class="box">.</div>
+            <div class="box operator" (click)="pushValue('*')">x</div>
+            <div class="box operator" (click)="pushValue('-')" style="font-size: 23px;">-</div>
+            <div class="box operator" (click)="pushValue('+') ">+</div>
+            <div class="box operator" (click)="getValue()"> =</div>
+          </div>
+    </div>
+</div>

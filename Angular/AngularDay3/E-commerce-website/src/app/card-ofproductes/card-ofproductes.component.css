@@ -1,0 +1,27 @@
+.card{
+    /* background-color: red; */
+    height: fit-content;
+    min-height: 450px;
+    max-height: fit-content;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.card img{
+    width: 210px;
+    height: 200px;
+}
+.card-title{
+    height: 45px;
+    overflow: hidden;
+}
+.card-body{
+width: 90%;
+height: 300px;
+}
+
+.card img:last-child{
+    width: 1000px;
+    }

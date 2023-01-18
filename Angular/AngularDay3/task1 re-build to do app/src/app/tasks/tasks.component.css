@@ -1,0 +1,34 @@
+ *{
+    margin: 0;
+ }
+ .task {
+    /* width:100%; */
+    background-color: #FEFEFE;
+           display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 10px;
+    border-radius:7px ;
+    -webkit-border-radius:7px ;
+    -moz-border-radius:7px ;
+    -ms-border-radius:7px ;
+    -o-border-radius:7px ;
+    color: #010730;
+}
+  .task input {
+
+ border: black;
+ /* background-color: blue; */
+}
+ .task button {
+ width: 10px;
+ color: #010730;
+ text-align: center;
+ outline: none !important;
+ background-color: transparent;
+ border: none;
+ margin-right: 10px;
+}
+.completed{
+ background-color: #5637E1;
+}

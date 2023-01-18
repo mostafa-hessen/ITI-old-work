@@ -45,19 +45,35 @@ export class Task2ToDoListComponent {
 
 checked:any
 remove:string="no"
+
   completed(id:any,e:any){
   console.log(e);
-  
+
+
     this.checked= this.arrayOFValues.filter((ele: any) => {
       return ele.id == id
     })
- this.arrayOFValues=[
-  Object.assign( this.checked[0],{is_Checked:true}),
-   ...this.arrayOFValues.filter((ele: any) => {
-      return ele.id != id
-    })
-  ]
-  console.log(this.arrayOFValues);
+
+    console.log(this.checked);
+    
+    if(this.checked[0].is_Checked)
+    {
+      this.checked[0].is_Checked=false
+      
+    }
+
+    else{
+      this.checked[0].is_Checked=true
+
+    }
+
+//  this.arrayOFValues=[
+//   Object.assign( this.checked[0],{is_Checked:true}),
+//    ...this.arrayOFValues.filter((ele: any) => {
+//       return ele.id != id
+//     })
+//   ]
+  // console.log(this.arrayOFValues);
    
     
     // this.arrayOFValues=[ this.arrayOFValues,]

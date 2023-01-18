@@ -1,0 +1,43 @@
+<style>
+  body {
+    background-color: red;
+  }
+  h1 {
+    color: gold;
+    text-align: center;
+    text-transform: capitalize;
+  }
+  .headHead {
+    background-color: #f4bc11;
+  }
+</style>
+<div class="app">
+  <h1 class="mb-5 mt-3">mostafa hessen ramdan</h1>
+</div>
+
+<div class="container  m-auto ">
+  <div class="todoList mt-2  ">
+
+    <div class="logo">
+      <img src="../assets/images/R.png" alt="" />
+    </div>
+
+    <!--  =====  Add task  =====  -->
+    <section class="todo-body">
+    <app-to-do-add-task
+      (getChangInputFromChiled)="ubdateValue($event)"
+      (getTaskInputFromChiled)="getChangInputToParent($event)"
+    ></app-to-do-add-task>
+    <!-- ===== Tasks  =====  -->
+    <div class="tasks mt-3 ">
+        <app-tasks *ngFor="let mytask of arrayOFValues " 
+         [taskValue]="mytask"
+         [arrayOfTasks]="arrayOFValues"  
+         (getArrayOfElementFromChild)="getArrayOfElementFromChildToParent($event)"
+         ></app-tasks>
+    </div>
+  </section>
+    <!-- ===== Footer ===== -->
+    <app-to-do-footer></app-to-do-footer>
+  </div>
+</div>

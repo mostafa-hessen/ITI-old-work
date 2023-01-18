@@ -1,0 +1,29 @@
+<!-- === task === -->
+<div
+  class="task mt-2"
+  [ngStyle]="
+    taskValue.is_Checked
+      ? { 'background-color': '#5637E1', color: '#fff' }
+      : { 'background-color': '#fff' }
+  "
+>
+  <div class="flex">
+    <input type="checkbox" (click)="completed(taskValue.id, $event)" />
+    <p
+      class="taskContent text-capitalize ms-3"
+      style="display: inline-block"
+      [ngStyle]="
+        taskValue.is_Checked
+          ? { 'text-decoration-line': 'line-through' }
+          : { 'text-decoration': 'none' }
+      "
+    >
+      {{ taskValue.taskName }}
+    </p>
+  </div>
+  <button 
+  class=""
+  (click)="sendArrayToParent($event)"
+  >X</button>
+</div>
+<!-- (click)="delete(taskValue.id,$event)"  -->

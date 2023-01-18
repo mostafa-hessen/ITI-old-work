@@ -16,12 +16,13 @@
           <!-- class="task mt-2" [ngStyle]="{'background-color',text-decoration: value.is_Checked === true ? '#5637E1','none' : '#FEFEF','none' }"  -->
           <div
           *ngFor="let value of arrayOFValues "
-          class="task mt-2" [ngStyle]="value.is_Checked?{'background-color':'#5637E1','color':'#fff'}  : {'background-color':'#FEFEF'} " 
+          class="task mt-2" [ngStyle]="value.is_Checked?{'background-color':'#5637E1','color':'#fff'}  : {'background-color':'#fff'} " 
           
         >
           <div class="flex">
             <input type="checkbox" (click)="completed(value.id,$event)">
             <p class="taskContent text-capitalize ms-3"style="display: inline-block;"
+
             [ngStyle]="value.is_Checked?{'text-decoration-line':'line-through'}:{'text-decoration':'none'}"
             
             >
